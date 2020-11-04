@@ -19,6 +19,10 @@
 		3B8378D4255288CB00465603 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8378D3255288CB00465603 /* DemoTests.swift */; };
 		3B8378DF255288CB00465603 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8378DE255288CB00465603 /* DemoUITests.swift */; };
 		3B8378F0255289DC00465603 /* SampleInstantiate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B83789A2552888300465603 /* SampleInstantiate.framework */; };
+		3B83790525528BD100465603 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83790425528BD100465603 /* NextViewController.swift */; };
+		3B83791225528D2E00465603 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B83791025528D2E00465603 /* TableViewCell.swift */; };
+		3B83791325528D2E00465603 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B83791125528D2E00465603 /* TableViewCell.xib */; };
+		3B83791A2552922400465603 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8379192552922400465603 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		3B8378DA255288CB00465603 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8378DE255288CB00465603 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		3B8378E0255288CB00465603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B83790425528BD100465603 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		3B83791025528D2E00465603 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3B83791125528D2E00465603 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		3B8379192552922400465603 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3B83789D2552888300465603 /* SampleInstantiate.h */,
+				3B8379192552922400465603 /* UITableView+Extension.swift */,
 				3B83789E2552888300465603 /* Info.plist */,
 			);
 			path = SampleInstantiate;
@@ -158,6 +167,9 @@
 				3B8378BC255288C800465603 /* AppDelegate.swift */,
 				3B8378BE255288C800465603 /* SceneDelegate.swift */,
 				3B8378C0255288C800465603 /* ViewController.swift */,
+				3B83790425528BD100465603 /* NextViewController.swift */,
+				3B83791025528D2E00465603 /* TableViewCell.swift */,
+				3B83791125528D2E00465603 /* TableViewCell.xib */,
 				3B8378C2255288C800465603 /* Main.storyboard */,
 				3B8378C5255288CB00465603 /* Assets.xcassets */,
 				3B8378C7255288CB00465603 /* LaunchScreen.storyboard */,
@@ -305,6 +317,7 @@
 				TargetAttributes = {
 					3B8378992552888300465603 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					3B8378A22552888300465603 = {
 						CreatedOnToolsVersion = 12.1;
@@ -364,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8378C9255288CB00465603 /* LaunchScreen.storyboard in Resources */,
+				3B83791325528D2E00465603 /* TableViewCell.xib in Resources */,
 				3B8378C6255288CB00465603 /* Assets.xcassets in Resources */,
 				3B8378C4255288C800465603 /* Main.storyboard in Resources */,
 			);
@@ -390,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B83791A2552922400465603 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,8 +420,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B83790525528BD100465603 /* NextViewController.swift in Sources */,
 				3B8378C1255288C800465603 /* ViewController.swift in Sources */,
 				3B8378BD255288C800465603 /* AppDelegate.swift in Sources */,
+				3B83791225528D2E00465603 /* TableViewCell.swift in Sources */,
 				3B8378BF255288C800465603 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +609,7 @@
 		3B8378AF2552888300465603 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WQNJ5RALRG;
@@ -608,6 +626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.arsaga.SampleInstantiate;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,6 +635,7 @@
 		3B8378B02552888300465603 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = WQNJ5RALRG;
@@ -640,6 +660,7 @@
 		3B8378B22552888300465603 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQNJ5RALRG;
 				INFOPLIST_FILE = SampleInstantiateTests/Info.plist;
@@ -658,6 +679,7 @@
 		3B8378B32552888300465603 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQNJ5RALRG;
 				INFOPLIST_FILE = SampleInstantiateTests/Info.plist;
